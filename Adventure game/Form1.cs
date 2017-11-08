@@ -68,7 +68,7 @@ namespace Adventure_game
                 else if (scene == 12) { scene = 1; }
                 else if (scene == 20) { scene = 17; }
                 else if (scene == 17) { scene = 18; }
-                else if (scene == 100) { scene = 0; }
+                else if (scene == 100) { scene = 101; }
             }
             else if (e.KeyCode == Keys.N)  //green button press
             {
@@ -126,77 +126,117 @@ namespace Adventure_game
                 case 6:
                     outputLabel.Text = "you stand on your back legs. \n" +
                         " do you windmill menuver or dropkick ";
+                    redLabel.Text = "windmill ";
+                    blueLabel.Text = "dropkick ";
                     break;
                 case 7:
-                    outputLabel.Text = "you catch 3 more fish you win";
+                    outputLabel.Text = "you catch 3 more fish you survive";
+                    redLabel.Text = "continue  ";
+                    blueLabel.Text = " ";
                     break;
+                    
 
                 case 8:
                     outputLabel.Text = "you get overwhlmed by monkeys and die  ";
+                    redLabel.Text = "continue ";
+                    blueLabel.Text = " ";
                     break;
+                    
 
                 case 9:
                     outputLabel.Text = "you defeat all the monkeys /n do you hunt or sleep ";
+                    redLabel.Text = "hunt ";
+                    blueLabel.Text = "sleep ";
                     break;
+                    
 
                 case 10:
                     outputLabel.Text = "you have a great sleep  ";
+                    redLabel.Text = "continue ";
+                    blueLabel.Text = " ";
                     break;
+                    
 
                 case 11:
                     outputLabel.Text = "you stay up all night and die from exaution ";
+                    redLabel.Text = "continue ";
+                    blueLabel.Text = " ";
                     break;
+                    
 
                 case 12:
-                    outputLabel.Text = "you kill the dear and survive \n de you go to the river or stay and serach for dear or slee  ";
+                    outputLabel.Text = "you kill the dear and survive \n do you go to the river or stay and serach for dear or sleep  ";
+                    redLabel.Text = "serach ";
+                    blueLabel.Text = "river ";
+                    greenLabel.Text = "sleep";
                     break;
+                    
 
                 case 13:
-                    outputLabel.Text = "you spot a Sheep. it does not see you yet  what do you do \n attack or sleep ";
+                    outputLabel.Text = "you spot a Sheep. it does not see you yet  what do you do \n sleep or attack ";
+                    redLabel.Text = "sleep ";
+                    blueLabel.Text = "attack ";
                     break;
+                    
 
-                 case 14:
+                case 14:
                     outputLabel.Text = "you have a good nights sleep ";
+                    redLabel.Text = "continue ";
+                    blueLabel.Text = "  ";
                     break;
 
                  case 15:
                     outputLabel.Text = "you die from the wolf in disguise  ";
+                    redLabel.Text = "continue ";
+                    blueLabel.Text = "  ";
                     break;
 
                  case 16:
                     outputLabel.Text = "you have a good nights sleep ";
+                    redLabel.Text = "continue ";
+                    blueLabel.Text = "  ";
                     break;
 
                  case 17:
                     outputLabel.Text = "you spot a Sheep. it does not see you yet what do you do \n attack or sleep ";
+                    redLabel.Text = "attack ";
+                    blueLabel.Text = "sleep ";
                     break;
 
-                     case 18:
+                 case 18:
                     outputLabel.Text = "you have a bad nights sleep with no food \n ";
+                    redLabel.Text = "continue ";
+                    blueLabel.Text = "  ";
                     Starve++; 
                     break;
 
-                     case 19:
+                 case 19:
                     outputLabel.Text = "WIP ";
                     break;
 
-                     case 20:
+                 case 20:
                     outputLabel.Text = "the dear gets spooked and runs away do you \n go to the river or look for more dear  ";
+                    redLabel.Text = "river ";
+                    blueLabel.Text = "more dear ";
                     break;
 
-                     case 99: //loser restart 
+                 case 99: //loser restart 
                     outputLabel.Text = "you died do you want to try again ";
+                    redLabel.Text = "yes ";
+                    blueLabel.Text = "no ";
                     break; 
 
-                     case 100: // win restart 
+                 case 100: // win restart 
                     outputLabel.Text = "you survived do you want to continue to next day ";
+                    redLabel.Text = "yes ";
+                    blueLabel.Text = "no ";
                     day++;
                     break;
 
-                     case 101: //closing 
+                 case 101: //closing 
                     outputLabel.Text = " ";
                     Thread.Sleep(100);
-                 //   this.close;
+                    this.Close();
                     break;
 
             }

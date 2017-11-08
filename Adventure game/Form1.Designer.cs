@@ -87,7 +87,7 @@
             this.blueLabel.Name = "blueLabel";
             this.blueLabel.Size = new System.Drawing.Size(85, 62);
             this.blueLabel.TabIndex = 5;
-            this.blueLabel.Text = "river B";
+            this.blueLabel.Text = "woods B";
             // 
             // redLabel
             // 
@@ -95,7 +95,7 @@
             this.redLabel.Name = "redLabel";
             this.redLabel.Size = new System.Drawing.Size(85, 62);
             this.redLabel.TabIndex = 6;
-            this.redLabel.Text = "woods M";
+            this.redLabel.Text = "river M";
             // 
             // greenLabel
             // 
