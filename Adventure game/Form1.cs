@@ -7,12 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using System.Threading;
 namespace Adventure_game
 {
     public partial class Form1 : Form
     {        Random randGen = new  Random() ;
         int scene = 0;
+        int day = 0;
+        int Starve = 0 ;
 
         public Form1()
         {
@@ -35,10 +37,13 @@ namespace Adventure_game
                     else { scene = 9; }
                 }
                 else if (scene == 9) { scene = 11; }
+                else if (scene == 10) { scene = 100; }
                 else if (scene == 2) { scene = 12; }
                 else if (scene == 12) { scene = 13; }
                 else if (scene == 17) { scene = 15; }
                 else if (scene == 11) { scene = 1; }
+                else if (scene == 99) { scene = 0; }
+                else if (scene == 100) { scene = 0; }
             }
             else if (e.KeyCode == Keys.B)  //blue button press
             {
@@ -53,6 +58,7 @@ namespace Adventure_game
                 else if (scene == 12) { scene = 1; }
                 else if (scene == 20) { scene = 17; }
                 else if (scene == 17) { scene = 18; }
+                else if (scene == 100) { scene = 0; }
             }
             else if (e.KeyCode == Keys.N)  //green button press
             {
@@ -102,32 +108,76 @@ namespace Adventure_game
                 case 7:
                     outputLabel.Text = "you catch 3 more fish you win";
                     break;
+
                 case 8:
                     outputLabel.Text = "you get overwhlmed by monkeys and die  ";
                     break;
+
                 case 9:
                     outputLabel.Text = "you defeat all the monkeys /n do you hunt or sleep ";
                     break;
+
                 case 10:
-                    outputLabel.Text = "you have a great sleep and you win ";
+                    outputLabel.Text = "you have a great sleep  ";
                     break;
+
                 case 11:
                     outputLabel.Text = "you stay up all night and die from exaution ";
                     break;
+
                 case 12:
                     outputLabel.Text = "you kill the dear and survive \n de you go to the river or stay and serach for dear or slee  ";
                     break;
+
                 case 13:
+                    outputLabel.Text = "you spot a Sheep. it does not see you yet  what do you do \n attack or sleep ";
+                    break;
+
+                 case 14:
+                    outputLabel.Text = "you have a good nights sleep ";
+                    break;
+
+                     case 15:
+                    outputLabel.Text = "you die from the wolf in disguise  ";
+                    break;
+
+                     case 16:
+                    outputLabel.Text = "you have a good nights sleep ";
+                    break;
+
+                     case 17:
+                    outputLabel.Text = "you spot a Sheep. it does not see you yet what do you do \n attack or sleep ";
+                    break;
+
+                     case 18:
+                    outputLabel.Text = "you have a bad nights sleep with no food \n ";
+                    Starve++; 
+                    break;
+
+                     case 19:
                     outputLabel.Text = "WIP ";
                     break;
 
+                     case 20:
+                    outputLabel.Text = "the dear gets spooked and runs away do you \n go to the river or look for more dear  ";
+                    break;
+
+                     case 99: //loser restart 
+                    outputLabel.Text = "you died do you want to try again ";
+                    break; 
+
+                     case 100: // win restart 
+                    outputLabel.Text = "you survived do you want to continue to next day ";
+                    day++;
+                    break;
+
+                     case 101: //closing 
+                    outputLabel.Text = " ";
+                    Thread.Sleep(100);
+                    this.close;
+                    break;
+
             }
-
-
-
-
-
-
 
         }
     }
