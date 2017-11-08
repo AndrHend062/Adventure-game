@@ -48,6 +48,7 @@ namespace Adventure_game
                 }
                 else if (scene == 9) { scene = 11; }
                 else if (scene == 10) { scene = 100; }
+                else if (scene == 14) { scene = 100; }
                 else if (scene == 2) { scene = 12; }
                 else if (scene == 12) { scene = 13; }
                 else if (scene == 17) { scene = 15; }
@@ -72,7 +73,7 @@ namespace Adventure_game
             }
             else if (e.KeyCode == Keys.N)  //green button press
             {
-                if (scene == 12) { scene = 13; }
+                if (scene == 12) { scene = 14; }
               
             }
             else if (e.KeyCode == Keys.Space)  //yellow button press
@@ -176,6 +177,7 @@ namespace Adventure_game
                     outputLabel.Text = "you spot a Sheep. it does not see you yet  what do you do \n sleep or attack ";
                     redLabel.Text = "sleep ";
                     blueLabel.Text = "attack ";
+                    greenLabel.Text = "";
                     break;
                     
 
@@ -183,30 +185,35 @@ namespace Adventure_game
                     outputLabel.Text = "you have a good nights sleep ";
                     redLabel.Text = "continue ";
                     blueLabel.Text = "  ";
+                    greenLabel.Text = "";
                     break;
 
                  case 15:
                     outputLabel.Text = "you die from the wolf in disguise  ";
                     redLabel.Text = "continue ";
                     blueLabel.Text = "  ";
+                    greenLabel.Text = "";
                     break;
 
                  case 16:
                     outputLabel.Text = "you have a good nights sleep ";
                     redLabel.Text = "continue ";
                     blueLabel.Text = "  ";
+                    greenLabel.Text = "";
                     break;
 
                  case 17:
                     outputLabel.Text = "you spot a Sheep. it does not see you yet what do you do \n attack or sleep ";
                     redLabel.Text = "attack ";
                     blueLabel.Text = "sleep ";
+                    greenLabel.Text = "";
                     break;
 
                  case 18:
                     outputLabel.Text = "you have a bad nights sleep with no food \n ";
                     redLabel.Text = "continue ";
-                    blueLabel.Text = "  ";
+                    blueLabel.Text = " ";
+                    greenLabel.Text = "";
                     Starve++; 
                     break;
 
@@ -218,18 +225,21 @@ namespace Adventure_game
                     outputLabel.Text = "the dear gets spooked and runs away do you \n go to the river or look for more dear  ";
                     redLabel.Text = "river ";
                     blueLabel.Text = "more dear ";
+                    greenLabel.Text = "";
                     break;
 
                  case 99: //loser restart 
                     outputLabel.Text = "you died do you want to try again ";
                     redLabel.Text = "yes ";
                     blueLabel.Text = "no ";
+                    greenLabel.Text = "";
                     break; 
 
                  case 100: // win restart 
                     outputLabel.Text = "you survived do you want to continue to next day ";
                     redLabel.Text = "yes ";
                     blueLabel.Text = "no ";
+                    greenLabel.Text = "";
                     day++;
                     break;
 
