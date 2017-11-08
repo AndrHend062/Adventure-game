@@ -1,4 +1,5 @@
-﻿using System;
+﻿//adventure game andrew henderson
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Threading;
+
 namespace Adventure_game
 {
     public partial class Form1 : Form
@@ -31,6 +33,14 @@ namespace Adventure_game
                 else if (scene == 1) { scene = 3; }
                 else if (scene == 4) { scene = 3; }
                 else if (scene == 3) { scene = 5; }
+                else if (scene == 5) { scene = 99; }
+                else if (scene == 8) { scene = 99; }
+                else if (scene == 11) { scene = 99; }
+                else if (scene == 15) { scene = 99; }
+                else if (scene == 10) { scene = 100; }
+                else if (scene == 7) { scene = 100; }
+                else if (scene == 16) { scene = 100; }
+                else if (scene == 18) { scene = 100; }
                 else if (scene == 6)
                 {
                     if (rand > 90) { scene = 8; }
@@ -73,32 +83,44 @@ namespace Adventure_game
             switch (scene)
             {
                 case 0:
-                    outputLabel.Text = "you are a bear what do you want to do ";
+                    outputLabel.Text = "you are a bear what do you want to do \n go to river or the woods";
+                    redLabel.Text = "river ";
+                    blueLabel.Text = "woods ";
                     break;
 
                 case 1:
                     outputLabel.Text = "you approach a river \n do you try and catch fish " +
                         "or cross the river";
+                      redLabel.Text = "cross ";
+                    blueLabel.Text = "catch fish ";
                     break;
 
                 case 2:
                     outputLabel.Text = "you wander in the wood you see a deer " +
-                        "do you charge or sneak up on it ";
+                        "\n do you charge or sneak up on it ";
+                      redLabel.Text = "sneek  ";
+                    blueLabel.Text = "charge ";
                     break;
 
                 case 3:
                     outputLabel.Text = "you cross the river and you see a pack of monkeys charging" +
                         " you do you run or attack";
+                      redLabel.Text = "run ";
+                    blueLabel.Text = "attack ";
                     break;
 
                 case 4:
                     outputLabel.Text = "you catch 3 fish  \n do you stay " +
                         "and catch more or cross";
+                      redLabel.Text = "cross ";
+                    blueLabel.Text = "catch more ";
                     break;
 
                 case 5:
                     outputLabel.Text = "they are faster than you and" +
                         " you are overwelmed and die ";
+                      redLabel.Text = "river ";
+                    blueLabel.Text = "woods ";
                     break;
 
                 case 6:
@@ -137,15 +159,15 @@ namespace Adventure_game
                     outputLabel.Text = "you have a good nights sleep ";
                     break;
 
-                     case 15:
+                 case 15:
                     outputLabel.Text = "you die from the wolf in disguise  ";
                     break;
 
-                     case 16:
+                 case 16:
                     outputLabel.Text = "you have a good nights sleep ";
                     break;
 
-                     case 17:
+                 case 17:
                     outputLabel.Text = "you spot a Sheep. it does not see you yet what do you do \n attack or sleep ";
                     break;
 
@@ -174,7 +196,7 @@ namespace Adventure_game
                      case 101: //closing 
                     outputLabel.Text = " ";
                     Thread.Sleep(100);
-                    this.close;
+                 //   this.close;
                     break;
 
             }

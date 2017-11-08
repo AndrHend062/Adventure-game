@@ -41,11 +41,13 @@
             // 
             // outputLabel
             // 
+            this.outputLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.outputLabel.ForeColor = System.Drawing.SystemColors.ControlText;
             this.outputLabel.Location = new System.Drawing.Point(12, 9);
             this.outputLabel.Name = "outputLabel";
             this.outputLabel.Size = new System.Drawing.Size(438, 207);
             this.outputLabel.TabIndex = 0;
-            this.outputLabel.Text = "you are a bear what do you want to do ";
+            this.outputLabel.Text = "you are a bear what do you want to do go to river or the woods";
             // 
             // label1
             // 
@@ -85,7 +87,7 @@
             this.blueLabel.Name = "blueLabel";
             this.blueLabel.Size = new System.Drawing.Size(85, 62);
             this.blueLabel.TabIndex = 5;
-            this.blueLabel.Text = "B";
+            this.blueLabel.Text = "river B";
             // 
             // redLabel
             // 
@@ -93,7 +95,7 @@
             this.redLabel.Name = "redLabel";
             this.redLabel.Size = new System.Drawing.Size(85, 62);
             this.redLabel.TabIndex = 6;
-            this.redLabel.Text = "M";
+            this.redLabel.Text = "woods M";
             // 
             // greenLabel
             // 
@@ -101,7 +103,6 @@
             this.greenLabel.Name = "greenLabel";
             this.greenLabel.Size = new System.Drawing.Size(85, 62);
             this.greenLabel.TabIndex = 7;
-            this.greenLabel.Text = "greenLabel";
             // 
             // yellowLabel
             // 
@@ -109,7 +110,6 @@
             this.yellowLabel.Name = "yellowLabel";
             this.yellowLabel.Size = new System.Drawing.Size(85, 62);
             this.yellowLabel.TabIndex = 8;
-            this.yellowLabel.Text = "label7";
             // 
             // Form1
             // 
