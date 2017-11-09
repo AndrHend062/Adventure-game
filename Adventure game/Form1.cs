@@ -21,13 +21,17 @@ namespace Adventure_game
         public Form1()
         {
             InitializeComponent();
+            debugLabel.Text = scene + "";
+            dayLabel.Text = day + "";
         }
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
             /// check to see what button has been pressed and advance
             int rand = randGen.Next(1, 10);
             /// to the next appropriate scene
-            if (e.KeyCode == Keys.M)       //red button press
+            
+            
+           if (e.KeyCode == Keys.M)     //red button press
             {
                 if (scene == 0) { scene = 1; }
                 else if (scene == 1) { scene = 3; }
@@ -76,10 +80,14 @@ namespace Adventure_game
                 if (scene == 12) { scene = 14; }
               
             }
-            else if (e.KeyCode == Keys.Space)  //yellow button press
+            else if (e.KeyCode == Keys.Tab)  //green button press
             {
-              
+                debugLabel.Visible = true;
+
             }
+
+            debugLabel.Text = scene + "debug";
+            dayLabel.Text = "day "+day  ;
 
             switch (scene)
             {
@@ -248,6 +256,7 @@ namespace Adventure_game
                     Thread.Sleep(100);
                     this.Close();
                     break;
+                    
 
             }
 

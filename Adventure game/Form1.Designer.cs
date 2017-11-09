@@ -37,6 +37,8 @@
             this.redLabel = new System.Windows.Forms.Label();
             this.greenLabel = new System.Windows.Forms.Label();
             this.yellowLabel = new System.Windows.Forms.Label();
+            this.debugLabel = new System.Windows.Forms.Label();
+            this.dayLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // outputLabel
@@ -111,11 +113,31 @@
             this.yellowLabel.Size = new System.Drawing.Size(85, 62);
             this.yellowLabel.TabIndex = 8;
             // 
+            // debugLabel
+            // 
+            this.debugLabel.ForeColor = System.Drawing.Color.Red;
+            this.debugLabel.Location = new System.Drawing.Point(370, 347);
+            this.debugLabel.Name = "debugLabel";
+            this.debugLabel.Size = new System.Drawing.Size(100, 23);
+            this.debugLabel.TabIndex = 9;
+            this.debugLabel.Text = "0";
+            this.debugLabel.Visible = false;
+            // 
+            // dayLabel
+            // 
+            this.dayLabel.ForeColor = System.Drawing.Color.Red;
+            this.dayLabel.Location = new System.Drawing.Point(14, 193);
+            this.dayLabel.Name = "dayLabel";
+            this.dayLabel.Size = new System.Drawing.Size(100, 23);
+            this.dayLabel.TabIndex = 10;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(482, 379);
+            this.Controls.Add(this.dayLabel);
+            this.Controls.Add(this.debugLabel);
             this.Controls.Add(this.yellowLabel);
             this.Controls.Add(this.greenLabel);
             this.Controls.Add(this.redLabel);
@@ -143,6 +165,8 @@
         private System.Windows.Forms.Label redLabel;
         private System.Windows.Forms.Label greenLabel;
         private System.Windows.Forms.Label yellowLabel;
+        private System.Windows.Forms.Label debugLabel;
+        private System.Windows.Forms.Label dayLabel;
     }
 }
 
